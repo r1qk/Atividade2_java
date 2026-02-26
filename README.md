@@ -25,30 +25,57 @@ public class Cachorro {
     this.peso = 0.0;
   }
 ```
-Usamos um método para definir uma função. Nesse caso, a função é exibirFaixaEtária, que exibe se o cachorro é um animal jovem, adulto ou idoso com base na idade digitada pelo usuário. Essa exibição funciona utilizando o if else para definir
-a faixa etária do animal.
+Usamos um método para definir uma função. Nesse caso, a primeira função é envelhecer, onde o usuário digita quantos anos ele quer adicionar 
+ao cachorro e uma nova idade é gerada, somando a nova idade e a idadde antiga definida no parâmetro de quando o objeto foi criado. Também foi utilizado
+a condicional if para restringir o que o usuário pode digitar. É impossível rejuvenescer (literalmente) com o passar dos anos. 
+
+O outro método criado foi o trocarNome. Se o usuário digita um novo nome, o Cachorro tem o seu nome alterado. Também usamos conficional para restringir
+essa mudança, como por exemplo: um cachorro não pode passar a ter um nome vazio.
+Essa exibição funciona utilizando o if else para definir
+a faixa etária do animal. Ambos os métodos mencionados utilizam condicionais para fazer uma validação e alteram um dos atributos definidos pelo usuário.
 ```
-    public void exibirFaixaEtaria (int idade_animal) {
-    	if (idade_animal < 3) {
-    		System.out.println("Animal Jovem");
-    		return;
-    	} 
-    	
-    	if (idade_animal < 10) {
-    		System.out.println("Animal Adulto");
-    		return;
-    	} 
-    	
-    	if (idade_animal >= 10) {
-    		System.out.println("Animal Idoso");
-    		return;
-    	}
+public void envelhecer (int anos) {
+    if (anos < 0) {
+        System.out.println("Impossível :/");
+        return;
     }
+    if (anos == 0) {
+        System.out.println("Não envelheceu :D");
+        return;
+    }
+
+    if (this.idade + anos > 30) {
+        System.out.println("Idade máxima atingida :(");
+        return;
+    }
+
+    this.idade += anos;
+    String mensagem = String.format("Seu animal agora tem %d anos! ", idade); 
+    System.out.println(mensagem);
+    return;
+}
+
+public void trocarNome (String novo_nome) {
+    if (novo_nome == null) {
+        System.out.println("Nenhum nome foi digitado :(");
+        return;
+    }
+
+    if (novo_nome.length() == 1) {
+        System.out.println("Digite um nome com mais letras!");
+        return;
+    }
+
+    this.nome = novo_nome;
+    String mensagem2 = String.format("Nome alterado para %s! ", this.nome); 
+    System.out.println(mensagem2);
+    return;
 ```
 ### Arquivo main
-No arquivo main, temos a estrutura principal do código, onde ele roda e chama a classe. Aqui, criamos um objeto utilizando 
-a classe definida no arquivo model e, usando o nome do objeto criado, conseguimos chamar o método definido na classe. Esse método vai mostrar algo diferente dependendo de como o objeto foi criado. Nesse caso, usamos if para mostrar qual a
-faixa etária do animal, e então, isso será exibido quando chamado no arquivo main.
+No arquivo main, é onde o código funciona. Chamamos a classe a seus métodos, utilizamos a cláusula new para criar um objeto e 
+fornecer parâmetros aos seus atributos. Ao chamarmos os métodos, podemos utilizar valores para modificar a idade e o nome do cachorro, 
+mas se o valor for inválido ou improvável, a mudança não ocorre. No final, apenas exibimos as informações de cada um dos objetos criados, 
+ou seja, os cachorros.
 ```
     Cachorro cachorro1 = new Cachorro("Mike", 10, 15);
     System.out.println("Animal 1");

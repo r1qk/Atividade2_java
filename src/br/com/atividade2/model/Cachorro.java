@@ -30,7 +30,11 @@ public class Cachorro {
     		System.out.println("Animal Idoso");
     		return;
     	}
+
+        public void emitirSom () {
+            System.out.println("Au au!");
+            return;
+        }
     }
-    
     
 }

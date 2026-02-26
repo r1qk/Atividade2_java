@@ -14,22 +14,19 @@ public class sistemaPrincipal {
         Cachorro cachorro1 = new Cachorro("Mike", 10, 15);
         System.out.println("Animal 1");
         cachorro1.exibirFaixaEtaria(10);
+        cachorro1.emitirSom();
         
 
         // Criando o segundo cachorro (Objeto 2)
         Cachorro cachorro2 = new Cachorro("Bob", 2, 5);
         System.out.println("Animal 2");
         cachorro1.exibirFaixaEtaria(2);
+        cachorro2.emitirSom();
 
         // Exibindo os dados no Console
         System.out.println("--- Exibindo cachorros ---");
         System.out.println("Cachorro: " + cachorro1.nome + " | Idade: " + cachorro1.idade + " | Peso: " + cachorro1.peso);
         System.out.println("Cachorro: " + cachorro2.nome + " | Idade: " + cachorro2.idade + " | Peso: " + cachorro2.peso);
         
-        // Teste mental: Se eu mudar o nome do cachorro1, o cachorro2 muda
-        /*
-        Se mudar o nome do cachorro1, o nome do cachorro2 não muda. Apesar de serem
-        da mesma classe, são objetos diferentes, então seus atributos também são individuais para cada 	objeto.
-        */
     }
 }

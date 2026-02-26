@@ -13,15 +13,19 @@ public class sistemaPrincipal {
     	
         Cachorro cachorro1 = new Cachorro("Mike", 10, 15);
         System.out.println("Animal 1");
-        cachorro1.exibirFaixaEtaria(10);
-        cachorro1.emitirSom();
+        cachorro1.envelhecer(0);
+        cachorro1.envelhecer(7);
+        cachorro1.trocarNome("A");
+        cachorro1.trocarNome("Zeus");
         
 
         // Criando o segundo cachorro (Objeto 2)
         Cachorro cachorro2 = new Cachorro("Bob", 2, 5);
-        System.out.println("Animal 2");
-        cachorro1.exibirFaixaEtaria(2);
-        cachorro2.emitirSom();
+        System.out.println("Animal 1");
+        cachorro2.envelhecer(50);
+        cachorro2.envelhecer(6);
+        cachorro2.trocarNome();
+        cachorro2.trocarNome("Thor");
 
         // Exibindo os dados no Console
         System.out.println("--- Exibindo cachorros ---");

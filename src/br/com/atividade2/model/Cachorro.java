@@ -49,6 +49,8 @@ public class Cachorro {
         }
 
         this.nome = novo_nome;
+        String mensagem2 = String.format("Nome alterado para %s! ", this.nome); 
+        System.out.println(mensagem2);
         return;
 
     }

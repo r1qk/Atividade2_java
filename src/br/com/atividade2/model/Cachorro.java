@@ -12,7 +12,7 @@ public class Cachorro {
     public Cachorro(String nome, int idade, double peso) {
     	this.nome = nome;
     	this.idade = idade;
-    	this.peso = 0.0;
+    	this.peso = peso;
     }
     
     public void exibirFaixaEtaria (int idade_animal) {

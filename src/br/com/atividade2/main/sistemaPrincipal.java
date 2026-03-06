@@ -21,7 +21,7 @@ public class sistemaPrincipal {
 
         // Criando o segundo cachorro (Objeto 2)
         Cachorro cachorro2 = new Cachorro("Bob", 2, 5);
-        System.out.println("Animal 1");
+        System.out.println("Animal 2");
         cachorro2.envelhecer(50);
         cachorro2.envelhecer(6);
         cachorro2.trocarNome("");

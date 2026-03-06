@@ -24,7 +24,7 @@ public class sistemaPrincipal {
         System.out.println("Animal 1");
         cachorro2.envelhecer(50);
         cachorro2.envelhecer(6);
-        cachorro2.trocarNome();
+        cachorro2.trocarNome("");
         cachorro2.trocarNome("Thor");
 
         // Exibindo os dados no Console
